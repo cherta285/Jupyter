@@ -42,3 +42,17 @@ def clean_item2(my_item):
 
 for item in lst:
     print(clean_item2(str(item)))
+
+
+#Сайт seaborn
+    
+url = "https://seaborn.pydata.org/examples/index.html"
+response = requests.get(url)
+
+soup = BeautifulSoup(response.content,'html.parser')
+print(soup)
+
+lst = soup.find_all('p')
+
+for item in lst:
+    print(item)
